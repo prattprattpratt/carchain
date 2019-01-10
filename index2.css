@@ -1,0 +1,114 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-container {
+    position: absolute;
+    width: 100px;
+    margin: 2rem;
+}
+    .logo-image {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    .logo-image:hover {
+        
+    }
+        .logo-image g {
+            stroke: #eaf6ff;
+        }
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+    .layer-one {
+        height: 100%;
+        width: 100%;
+        background: #009cff;
+        display: flex;
+    }
+        .hero-text {
+            font-family: 'Ultra', serif;
+            font-size: 110px;
+            font-weight: normal;
+            position: absolute;
+            margin-left: 8vh;
+            color: #eaf6ff;
+            margin-top: 24vh;
+            z-index: 1;
+        }
+        .layer-two {
+            height: 625px;
+            background: #5cbfff;
+            margin: 12vh 12vh 0 auto;
+            display: flex;
+            position: relative;
+            transform: rotate(25deg);
+        }
+        .layer-two, .layer-two::before, .layer-two::after {
+            width: 625px;
+        }
+        .layer-two::before, .layer-two::after {
+            border-left: solid #019cff 181.25px;
+            border-right: solid #019cff 181.25px;
+        }
+        .layer-two::before {
+            border-bottom: solid #5cbfff 181.25px;
+        }
+        .layer-two::after {
+            border-top: solid #5cbfff 181.25px;
+        }
+        .layer-two::before, .layer-two::after,
+        .layer-three::before, .layer-three::after {
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            height: 0;
+        }
+        .layer-two::after, .layer-three::after {
+            bottom: 0;
+        }
+            .layer-three {
+                background: #acdeff;
+                height: 412.5px;
+                position: absolute;
+                margin: 106.25px 0 0 106.25px;
+                z-index: 1;
+                transform: rotate(20deg);
+            }
+            .layer-three, .layer-three::before, .layer-three::after {
+                width: 412.5px;
+            }
+            .layer-three::before, .layer-three::after {
+                border-left: solid #5cbfff 119.625px;
+                border-right: solid #5cbfff 119.625px;
+            }
+            .layer-three::before {
+                border-bottom: solid #acdeff 119.625px;
+            }
+            .layer-three::after {
+                border-top: solid #acdeff 119.625px;
+            }
+                .layer-four {
+                    width: 200px;
+                    height: 200px;
+                    background: #eaf6ff;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 106.25px;
+                    margin-left: 106.25px;
+                    box-shadow: 30px 30px 60px #00000030;
+                    z-index: 1;
+                }
+                    .hero-image {
+                        width: 500px;
+                        transform: rotate(-20deg);
+                        margin-left: 50px;
+                        margin-bottom: 30px;
+                    }
