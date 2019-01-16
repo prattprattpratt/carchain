@@ -20,12 +20,12 @@ html, body {
             stroke: #eaf6ff;
         }
 
-.hero {
+.hero, .hero-2 {
     height: 100vh;
     width: 100vw;
-    overflow-y: hidden;
+    overflow: hidden;
 }
-    .layer-one {
+    .hero-layer-one {
         height: 100%;
         width: 100%;
         background: #009cff;
@@ -41,7 +41,7 @@ html, body {
             margin-top: 24vh;
             z-index: 1;
         }
-        .layer-two {
+        .hero-layer-two {
             height: 625px;
             background: #5cbfff;
             margin: 12vh 12vh 0 auto;
@@ -49,30 +49,30 @@ html, body {
             position: relative;
             transform: rotate(25deg);
         }
-        .layer-two, .layer-two::before, .layer-two::after {
+        .hero-layer-two, .hero-layer-two::before, .hero-layer-two::after {
             width: 625px;
         }
-        .layer-two::before, .layer-two::after {
-            border-left: solid #019cff 181.25px;
-            border-right: solid #019cff 181.25px;
+        .hero-layer-two::before, .hero-layer-two::after {
+            border-left: solid #009cff 181.25px;
+            border-right: solid #009cff 181.25px;
         }
-        .layer-two::before {
+        .hero-layer-two::before {
             border-bottom: solid #5cbfff 181.25px;
         }
-        .layer-two::after {
+        .hero-layer-two::after {
             border-top: solid #5cbfff 181.25px;
         }
-        .layer-two::before, .layer-two::after,
-        .layer-three::before, .layer-three::after {
+        .hero-layer-two::before, .hero-layer-two::after,
+        .hero-layer-three::before, .hero-layer-three::after {
             content: "";
             position: absolute;
             box-sizing: border-box;
             height: 0;
         }
-        .layer-two::after, .layer-three::after {
+        .hero-layer-two::after, .hero-layer-three::after {
             bottom: 0;
         }
-            .layer-three {
+            .hero-layer-three {
                 background: #acdeff;
                 height: 412.5px;
                 position: absolute;
@@ -80,20 +80,20 @@ html, body {
                 z-index: 1;
                 transform: rotate(20deg);
             }
-            .layer-three, .layer-three::before, .layer-three::after {
+            .hero-layer-three, .hero-layer-three::before, .hero-layer-three::after {
                 width: 412.5px;
             }
-            .layer-three::before, .layer-three::after {
+            .hero-layer-three::before, .hero-layer-three::after {
                 border-left: solid #5cbfff 119.625px;
                 border-right: solid #5cbfff 119.625px;
             }
-            .layer-three::before {
+            .hero-layer-three::before {
                 border-bottom: solid #acdeff 119.625px;
             }
-            .layer-three::after {
+            .hero-layer-three::after {
                 border-top: solid #acdeff 119.625px;
             }
-                .layer-four {
+                .hero-layer-four {
                     width: 200px;
                     height: 200px;
                     background: #eaf6ff;
@@ -112,3 +112,116 @@ html, body {
                         margin-left: 50px;
                         margin-bottom: 30px;
                     }
+    .scroll-affordance-container {
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+        .scroll-dot {
+            position: absolute;
+            margin-top: 10px;
+            transition: margin-top;
+            animation: scroll-dot-animate 1.6s infinite;
+        }
+
+.hero-2-layer-one {
+    height: 100%;
+    width: 100%;
+    background: #23F0C7;
+    display: flex;
+}
+    .hero-2-text {
+        font-family: 'Ultra', serif;
+        font-size: 110px;
+        font-weight: normal;
+        position: absolute;
+        margin-left: 8vh;
+        color: #eaf6ff;
+        margin-top: 24vh;
+        z-index: 1;
+    }
+    .hero-2-layer-two {
+        height: 625px;
+        background: #5cbfff;
+        margin: 12vh 12vh 0 auto;
+        display: flex;
+        position: relative;
+        transform: rotate(25deg);
+    }
+    .hero-2-layer-two, .hero-2-layer-two::before, .hero-2-layer-two::after {
+        width: 625px;
+    }
+    .hero-2-layer-two::before, .hero-2-layer-two::after {
+        border-left: solid #23F0C7 181.25px;
+        border-right: solid #23F0C7 181.25px;
+    }
+    .hero-2-layer-two::before {
+        border-bottom: solid #5cbfff 181.25px;
+    }
+    .hero-2-layer-two::after {
+        border-top: solid #5cbfff 181.25px;
+    }
+    .hero-2-layer-two::before, .hero-2-layer-two::after,
+    .hero-2-layer-three::before, .hero-2-layer-three::after {
+        content: "";
+        position: absolute;
+        box-sizing: border-box;
+        height: 0;
+    }
+    .hero-2-layer-two::after, .hero-2-layer-three::after {
+        bottom: 0;
+    }
+        .hero-2-layer-three {
+            background: #acdeff;
+            height: 412.5px;
+            position: absolute;
+            margin: 106.25px 0 0 106.25px;
+            z-index: 1;
+            transform: rotate(20deg);
+        }
+        .hero-2-layer-three, .hero-2-layer-three::before, .hero-2-layer-three::after {
+            width: 412.5px;
+        }
+        .hero-2-layer-three::before, .hero-2-layer-three::after {
+            border-left: solid #5cbfff 119.625px;
+            border-right: solid #5cbfff 119.625px;
+        }
+        .hero-2-layer-three::before {
+            border-bottom: solid #acdeff 119.625px;
+        }
+        .hero-2-layer-three::after {
+            border-top: solid #acdeff 119.625px;
+        }
+            .hero-2-layer-four {
+                width: 200px;
+                height: 200px;
+                background: #eaf6ff;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 106.25px;
+                margin-left: 106.25px;
+                box-shadow: 30px 30px 60px #00000030;
+                z-index: 1;
+            }
+                .hero-2-image {
+                    width: 500px;
+                    transform: rotate(-20deg);
+                    margin-left: 50px;
+                    margin-bottom: 30px;
+                }
+
+@keyframes scroll-dot-animate {
+    0% {
+        margin-top: 10px;
+    }
+    80% {
+        margin-top: 35px;
+    }
+    100% {
+        margin-top: 10px;
+    }
+}
