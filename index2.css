@@ -36,9 +36,8 @@ html, body {
             font-size: 110px;
             font-weight: normal;
             position: absolute;
-            margin-left: 8vh;
+            margin: 24vh 0 0 8vh;
             color: #eaf6ff;
-            margin-top: 24vh;
             z-index: 1;
         }
         .hero-layer-two {
@@ -119,11 +118,23 @@ html, body {
         display: flex;
         justify-content: center;
     }
+        .scroll-mouse {
+            height: 60px;
+            width: 35px;
+            display: flex;
+            justify-content: center;
+            border: solid white;
+            border-radius: 50% / 28%;
+            box-sizing: border-box;
+        }
         .scroll-dot {
-            position: absolute;
-            margin-top: 10px;
+            width: 13px;
+            height: 13px;
+            background: white;
+            border-radius: 50%;
+            margin-top: 8px;
             transition: margin-top;
-            animation: scroll-dot-animate 1.6s infinite;
+            animation: scroll-dot-animate 1.9s infinite;
         }
 
 .hero-2-layer-one {
@@ -137,18 +148,18 @@ html, body {
         font-size: 110px;
         font-weight: normal;
         position: absolute;
-        margin-left: 8vh;
-        color: #eaf6ff;
-        margin-top: 24vh;
+        right: 0;
+        margin: 33vh 8vh 0 0;
+        color: #eafffb;
         z-index: 1;
     }
     .hero-2-layer-two {
         height: 625px;
-        background: #5cbfff;
-        margin: 12vh 12vh 0 auto;
+        background: #6df9dd;
+        margin: 12vh 0 0 12vh;
         display: flex;
         position: relative;
-        transform: rotate(25deg);
+        transform: rotate(40deg);
     }
     .hero-2-layer-two, .hero-2-layer-two::before, .hero-2-layer-two::after {
         width: 625px;
@@ -158,10 +169,10 @@ html, body {
         border-right: solid #23F0C7 181.25px;
     }
     .hero-2-layer-two::before {
-        border-bottom: solid #5cbfff 181.25px;
+        border-bottom: solid #6df9dd 181.25px;
     }
     .hero-2-layer-two::after {
-        border-top: solid #5cbfff 181.25px;
+        border-top: solid #6df9dd 181.25px;
     }
     .hero-2-layer-two::before, .hero-2-layer-two::after,
     .hero-2-layer-three::before, .hero-2-layer-three::after {
@@ -174,30 +185,30 @@ html, body {
         bottom: 0;
     }
         .hero-2-layer-three {
-            background: #acdeff;
+            background: #affbec;
             height: 412.5px;
             position: absolute;
             margin: 106.25px 0 0 106.25px;
             z-index: 1;
-            transform: rotate(20deg);
+            transform: rotate(17deg);
         }
         .hero-2-layer-three, .hero-2-layer-three::before, .hero-2-layer-three::after {
             width: 412.5px;
         }
         .hero-2-layer-three::before, .hero-2-layer-three::after {
-            border-left: solid #5cbfff 119.625px;
-            border-right: solid #5cbfff 119.625px;
+            border-left: solid #6df9dd 119.625px;
+            border-right: solid #6df9dd 119.625px;
         }
         .hero-2-layer-three::before {
-            border-bottom: solid #acdeff 119.625px;
+            border-bottom: solid #affbec 119.625px;
         }
         .hero-2-layer-three::after {
-            border-top: solid #acdeff 119.625px;
+            border-top: solid #affbec 119.625px;
         }
             .hero-2-layer-four {
                 width: 200px;
                 height: 200px;
-                background: #eaf6ff;
+                background: #eafffb;
                 position: absolute;
                 display: flex;
                 justify-content: center;
@@ -205,6 +216,7 @@ html, body {
                 margin-top: 106.25px;
                 margin-left: 106.25px;
                 box-shadow: 30px 30px 60px #00000030;
+                transform: rotate(-10deg);
                 z-index: 1;
             }
                 .hero-2-image {
@@ -216,12 +228,12 @@ html, body {
 
 @keyframes scroll-dot-animate {
     0% {
-        margin-top: 10px;
+        margin-top: 8px;
     }
-    80% {
-        margin-top: 35px;
+    85% {
+        margin-top: 32px;
     }
     100% {
-        margin-top: 10px;
+        margin-top: 8px;
     }
 }
