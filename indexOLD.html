@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: adobe-fan-heiti-std, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+        .background {
+            background: linear-gradient(to bottom, #b5ddfc 0%,#ffffff 70%);
+        }
+        .nav, .hero-content {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+        .nav-logo {
+            height: 60%;
+            margin-left: 2rem;
+        }
+        .nav-options {
+            display: flex;
+        }
+        .nav-option {
+            margin-right: 2rem;
+            color: white;
+        }
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .hero-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 50vh;
+        }
+        .hero-copy {
+            font-size: 1.7rem;
+        }
+        .white-text { 
+            color: white;
+        }
+        .blue-text {
+            color: #b5ddfc;
+        }
+        .hero-image {
+            width: 500px;
+            height: 100%;
+        }
+    </style>
+
+    <script>
+        (function(d) {
+            var config = {
+                    kitId: 'ggu7giw',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="nav">
+            <img class="nav-logo" src="logo.png" />
+            <div class="nav-options">
+                <div class="nav-option">Buy</div>
+                <div class="nav-option">Sell</div>
+                <div class="nav-option">My Car &or;</div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-section hero-one">
+                <p class="white-text hero-copy">Hello there, used car sales.<br/>Meet 2018.</p>
+                <img class="hero-image" src="car2.png" />
+            </div>
+            <div class="hero-section hero-two">
+                <img class="hero-image" src="car1.png" />
+                <p class="blue-text hero-copy">It's about time you<br/>caught up.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
