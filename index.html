@@ -1,98 +1,71 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <style>
-        body {
-            margin: 0;
-            font-family: adobe-fan-heiti-std, sans-serif;
-            font-weight: 600;
-            font-style: normal;
-        }
-        .background {
-            background: linear-gradient(to bottom, #b5ddfc 0%,#ffffff 70%);
-        }
-        .nav, .hero-content {
-            max-width: 1200px;
-            margin: auto;
-        }
-        .nav {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 60px;
-        }
-        .nav-logo {
-            height: 60%;
-            margin-left: 2rem;
-        }
-        .nav-options {
-            display: flex;
-        }
-        .nav-option {
-            margin-right: 2rem;
-            color: white;
-        }
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .hero-section {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            min-height: 50vh;
-        }
-        .hero-copy {
-            font-size: 1.7rem;
-        }
-        .white-text { 
-            color: white;
-        }
-        .blue-text {
-            color: #b5ddfc;
-        }
-        .hero-image {
-            width: 500px;
-            height: 100%;
-        }
-    </style>
-
-    <script>
-        (function(d) {
-            var config = {
-                    kitId: 'ggu7giw',
-                    scriptTimeout: 3000,
-                    async: true
-                },
-            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-        })(document);
-    </script>
+    <meta charset="UTF-8">
+    <title>CarChain</title>
+    <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css" >
+    <script src="index.js"></script>
 </head>
 
 <body>
-    <div class="background">
-        <div class="nav">
-            <img class="nav-logo" src="logo.png" />
-            <div class="nav-options">
-                <div class="nav-option">Buy</div>
-                <div class="nav-option">Sell</div>
-                <div class="nav-option">My Car &or;</div>
+    <!-- <div class="navigation">
+        <a class="nav-link">Trucks</a>
+        <a class="nav-link">Cars</a>
+        <a class="nav-link">Vans</a>
+        <img src="/logo.png" />
+        <a class="nav-link">Sell a Vehicle</a>
+        <a class="nav-link">My Vehicles</a>
+    </div> -->
+    <div class="logo-container">
+        <!-- <?xml version="1.0" encoding="UTF-8"?>
+        <svg class="logo-image" width="415px" height="232px" viewBox="0 0 415 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(198.500000, 115.500000) rotate(-270.000000) translate(-198.500000, -115.500000) translate(145.000000, -83.000000)">
+                    <rect id="middle-chain" stroke-width="18" x="51.0032422" y="84.2125" width="3.48231335" height="222.900718" rx="1.74115667"></rect>
+                    <path d="M22.3691603,218.333092 L14.180103,218.333092 C8.55853461,218.333092 0.384818987,226.93366 0.384818987,232.608588 L0.384824642,307.319452 L0.384830297,381.02446 C0.384830297,386.699387 8.94200969,395.299955 14.563578,395.299955 L90.821224,395.299955 C96.4427358,395.299955 105,386.699387 105,381.02446 L105,306.816524 L105,232.608588 C105,226.93366 98.9307625,218.333092 93.3092507,218.333092 C89.5615762,218.333092 86.6616201,218.333092 84.6093824,218.333092" id="left-chain" stroke-width="19" stroke-linecap="round"></path>
+                    <path d="M20.4865923,0.264265649 L0.384807678,0.264265649 L0.384807678,89.2506195 L0.384818987,162.955627 C0.384818987,168.630555 8.94200969,177.231122 14.563578,177.231122 L90.821224,177.231122 C96.4427358,177.231122 105,168.630555 105,162.955627 L105,88.7476911 L105,10.5397552 C105,4.86477041 98.6165203,0.264265649 92.9950085,0.264265649 L84.5968461,0.264265649" id="right-chain" stroke-width="19" stroke-linecap="round" stroke-linejoin="round" transform="translate(52.692404, 88.747694) scale(1, -1) translate(-52.692404, -88.747694) "></path>
+                </g>
+                <path d="M45,177 C45,193.643675 64.9233286,212 89.5,212 C114.076671,212 134,193.643675 134,177" id="left-wheel" stroke-width="19"></path>
+                <path d="M265,177 C265,193.643675 284.923329,212 309.5,212 C334.076671,212 354,193.643675 354,177" id="right-wheel" stroke-width="19"></path>
+                <path d="M219.27,58 L219.27,5 C219.27,2.23857625 221.508576,9.64305346e-14 224.27,9.59232693e-14 L262.400303,1.10134124e-13 C274.018886,1.07999825e-13 285.063356,5.05178834 292.66145,13.8415794 L331.445793,59.0226003" id="car-hood" stroke-width="19"></path>
+            </g>
+        </svg> -->
+        <div class="html-logo">
+            <div class="car-hood"></div>
+            <div class="left-chain"></div>
+            <div class="right-chain"></div>
+            <div class="middle-chain"></div>
+            <div class="left-wheel"></div>
+            <div class="right-wheel"></div>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="hero-layer-one">
+            <h1 class="hero-text">Hey,<br> used car<br> industry.</h1>
+            <div class="hero-layer-two">
+                <div class="hero-layer-three">
+                    <div class="hero-layer-four">
+                        <!-- <img class="hero-image" src="car1.png" /> -->
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="hero-content">
-            <div class="hero-section hero-one">
-                <p class="white-text hero-copy">Hello there, used car sales.<br/>Meet 2018.</p>
-                <img class="hero-image" src="car2.png" />
+        <div class="scroll-affordance-container">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
             </div>
-            <div class="hero-section hero-two">
-                <img class="hero-image" src="car1.png" />
-                <p class="blue-text hero-copy">It's about time you<br/>caught up.</p>
+        </div>
+    </div>
+    <div class="hero-2">
+        <div class="hero-2-layer-one">
+            <h1 class="hero-2-text">Welcome<br> to 2019.</h1>
+            <div class="hero-2-layer-two">
+                <div class="hero-2-layer-three">
+                    <div class="hero-2-layer-four">
+                        <!-- <img class="hero-image" src="car1.png" /> -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
