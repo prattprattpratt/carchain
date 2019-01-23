@@ -2,106 +2,163 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
-.logo-container {
-    position: absolute;
-    width: 100px;
-    margin: 2rem;
+.no-scroll {
+    overflow: hidden;
 }
-    .html-logo {
-        width: 100px;
-        height: 50px;
+
+.navigation-menu {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    width: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 2;
+    transition: all 0.4s;
+}
+.navigation-menu-open {
+    width: 80%;
+}
+    .logo-container {
         position: absolute;
         top: 0;
-        cursor: pointer;
+        width: 100px;
+        margin: 2rem;
     }
-        .car-hood {
+        .html-logo {
+            width: 100px;
+            height: 50px;
             position: absolute;
-            left: 51px;
-            width: 14px;
-            height: 19px;
-            border-left: solid white 4px;
-            border-top: solid white 4px;
-            border-top-left-radius: 5px;
-            top: -2px;
+            top: 0;
+            cursor: pointer;
         }
-        .car-hood::before {
-            content: "";
-            position: absolute;
-            background: white;
-            height: 22px;
-            width: 4px;
-            right: -7px;
-            transform: rotate(-40deg);
-            top: -6px;
-            border-radius: 21px;
-        }
-        .left-chain {
-            width: 39px;
-            height: 21px;
-            border: solid 4px white;
-            position: absolute;
-            left: -2px;
-            top: 13px;
-            border-radius: 7px;
-        }
-        .left-chain::before {
-            content: "";
-            position: absolute;
-            right: -4px;
-            height: 12px;
-            width: 4px;
-            background: #019cff;
-            top: 5px;
-        }
-        .right-chain {
-            width: 39px;
-            height: 21px;
-            border: solid 4px white;
-            position: absolute;
-            right: 2px;
-            top: 13px;
-            border-radius: 7px;
-        }
-        .right-chain::before {
-            content: "";
-            position: absolute;
-            background: #019cff;
-            height: 12px;
-            width: 4px;
-            left: -4px;
-            top: 5px;
-        }
-        .middle-chain {
-            position: absolute;
-            width: 59px;
-            background: white;
-            height: 5px;
-            top: 25px;
-            left: 19px;
-            border-radius: 6px;
-        }
-        .left-wheel {
-            position: absolute;
-            bottom: -3px;
-            width: 26px;
-            height: 15px;
-            left: 9px;
-            border-bottom-left-radius: 21px;
-            border-bottom-right-radius: 21px;
-            border: solid white 4px;
-            box-sizing: border-box;
-        }
-        .right-wheel {
-            position: absolute;
-            bottom: -3px;
-            width: 26px;
-            height: 15px;
-            left: 62px;
-            border-bottom-left-radius: 21px;
-            border-bottom-right-radius: 21px;
-            border: solid white 4px;
-            box-sizing: border-box;
+            .html-logo:not(:hover) {
+                animation: logo-animate infinite 3s;
+            }
+            .html-logo * {
+                transition: all 0.4s;
+            }
+            .car-hood {
+                position: absolute;
+                left: 51px;
+                width: 14px;
+                height: 19px;
+                border-left: solid white 4px;
+                border-top: solid white 4px;
+                border-top-left-radius: 5px;
+                top: -2px;
+            }
+            .car-hood::before {
+                content: "";
+                position: absolute;
+                background: white;
+                height: 22px;
+                width: 4px;
+                right: -7px;
+                transform: rotate(-40deg);
+                top: -6px;
+                border-radius: 21px;
+            }
+            .left-chain {
+                width: 39px;
+                height: 21px;
+                border: solid 4px white;
+                position: absolute;
+                left: -2px;
+                top: 13px;
+                border-radius: 7px;
+            }
+            .left-chain::before {
+                content: "";
+                position: absolute;
+                right: -4px;
+                height: 12px;
+                width: 4px;
+                background: #019cff;
+                top: 5px;
+            }
+            .right-chain {
+                width: 39px;
+                height: 21px;
+                border: solid 4px white;
+                position: absolute;
+                right: 2px;
+                top: 13px;
+                border-radius: 7px;
+            }
+            .right-chain::before {
+                content: "";
+                position: absolute;
+                background: #019cff;
+                height: 12px;
+                width: 4px;
+                left: -4px;
+                top: 5px;
+            }
+            .middle-chain {
+                position: absolute;
+                width: 59px;
+                background: white;
+                height: 5px;
+                top: 25px;
+                left: 19px;
+                border-radius: 6px;
+            }
+            .middle-chain::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: white;
+                border-radius: 6px;
+                transition: all 0.4s;
+            }
+            .navigation-menu-open .middle-chain, .navigation-menu-open .middle-chain::before {
+                background: #353535;
+            }
+            .left-wheel {
+                position: absolute;
+                bottom: -3px;
+                width: 26px;
+                height: 15px;
+                left: 9px;
+                border-bottom-left-radius: 21px;
+                border-bottom-right-radius: 21px;
+                border: solid white 4px;
+                box-sizing: border-box;
+            }
+            .right-wheel {
+                position: absolute;
+                bottom: -3px;
+                width: 26px;
+                height: 15px;
+                left: 62px;
+                border-bottom-left-radius: 21px;
+                border-bottom-right-radius: 21px;
+                border: solid white 4px;
+                box-sizing: border-box;
+            }
+            .html-logo:hover .middle-chain { transform: rotate(10deg); }
+            .html-logo:hover .middle-chain::before { transform: rotate(-20deg); }
+            .navigation-menu-open .html-logo *:not(.middle-chain) { opacity: 0; }
+            .navigation-menu-open .middle-chain { transform: rotate(45deg); }
+            .navigation-menu-open .middle-chain::before { transform: rotate(-90deg); }
+            .navigation-menu-open .html-logo:hover .middle-chain { transform: rotate(35deg); }
+            .navigation-menu-open .html-logo:hover .middle-chain::before { transform: rotate(-70deg); }
+    .navigation-menu ul {
+        margin-left: 10%;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+    }
+        .navigation-menu ul .nav-item {
+            font-size: 5rem;
+            line-height: 8rem;
+            font-family: 'Ultra';
+            color: #353535;
+            width: max-content;
         }
 
 .hero, .hero-2 {
@@ -198,7 +255,7 @@ html, body {
     .scroll-affordance-container {
         position: absolute;
         bottom: 15px;
-        width: 100%;
+        margin-left: calc(50vw - 17.5px);
         display: flex;
         justify-content: center;
     }
@@ -324,5 +381,23 @@ html, body {
     }
     100% {
         margin-top: 8px;
+    }
+}
+
+@keyframes logo-animate {
+    40% {
+        transform: translateY(0px);
+    }
+    45% {
+        transform: translateY(2px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    55% {
+        transform: translateY(2px);
+    }
+    60% {
+        transform: translateY(0px);
     }
 }
