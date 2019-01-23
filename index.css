@@ -73,11 +73,18 @@ html, body {
             .left-chain::before {
                 content: "";
                 position: absolute;
-                right: -4px;
-                height: 12px;
-                width: 4px;
+                right: -14px;
+                height: 4px;
+                width: 14px;
                 background: #019cff;
-                top: 5px;
+                bottom: 4px;
+                z-index: 1;
+            }
+            .left-chain.blend-into-text::before, .right-chain.blend-into-text::before {
+                background: #eafffb;
+            }
+            .left-chain.blend-into-green::before, .right-chain.blend-into-green::before {
+                background: #23F0C7;
             }
             .right-chain {
                 width: 39px;
@@ -92,10 +99,10 @@ html, body {
                 content: "";
                 position: absolute;
                 background: #019cff;
-                height: 12px;
-                width: 4px;
-                left: -4px;
-                top: 5px;
+                height: 4px;
+                width: 14px;
+                left: -14px;
+                top: 4px;
             }
             .middle-chain {
                 position: absolute;
@@ -148,7 +155,7 @@ html, body {
             .navigation-menu-open .html-logo:hover .middle-chain { transform: rotate(35deg); }
             .navigation-menu-open .html-logo:hover .middle-chain::before { transform: rotate(-70deg); }
     .navigation-menu ul {
-        margin-left: 10%;
+        margin-left: 8vw;
         padding: 0;
         list-style: none;
         overflow: hidden;
@@ -366,6 +373,18 @@ html, body {
                     margin-left: 50px;
                     margin-bottom: 30px;
                 }
+
+@media (max-width: 1420px) {
+    .hero-text, .hero-2-text {
+        font-size: 70px;
+    }
+    .hero-text {
+        margin-top: 33vh;
+    }
+    .hero-2-text {
+        margin-top: 40vh;
+    }
+}
 
 @keyframes scroll-dot-animate {
     0% {
