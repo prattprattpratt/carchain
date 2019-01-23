@@ -1,14 +1,47 @@
 window.onload = () => {
     window.addEventListener("scroll", ev => {
-        const heroDeg = 25 + window.scrollY / 10;
+        const scrollY = window.scrollY;
+        console.log(scrollY);
+
+        const heroDeg = 25 + scrollY / 10;
         const heroLayerTwo = document.getElementsByClassName("hero-layer-two")[0];
 
         heroLayerTwo.style.transform = `rotate(${heroDeg}deg)`;
 
-        const hero2Deg = + window.scrollY / 5 - 130;
+        const hero2Deg = + scrollY / 5 - 130;
         const hero2LayerTwo = document.getElementsByClassName("hero-2-layer-two")[0];
 
         hero2LayerTwo.style.transform = `rotate(${hero2Deg}deg)`;
+
+        if (
+            (scrollY > 164 && scrollY < 244) ||
+            (scrollY > 326 && scrollY < 382) ||
+            (scrollY > 447 && scrollY < 526)
+        ) {
+            document.querySelector(".left-chain").classList.add("blend-into-text");
+            document.querySelector(".left-chain").classList.remove("blend-into-green");
+        } else if (scrollY > 759) {
+            document.querySelector(".left-chain").classList.remove("blend-into-text");
+            document.querySelector(".left-chain").classList.add("blend-into-green");
+        } else {
+            document.querySelector(".left-chain").classList.remove("blend-into-text");
+            document.querySelector(".left-chain").classList.remove("blend-into-green");
+        }
+
+        if (
+            (scrollY > 174 && scrollY < 254) ||
+            (scrollY > 336 && scrollY < 392) ||
+            (scrollY > 457 && scrollY < 536)
+        ) {
+            document.querySelector(".right-chain").classList.add("blend-into-text");
+            document.querySelector(".right-chain").classList.remove("blend-into-green");
+        } else if (scrollY > 769) {
+            document.querySelector(".right-chain").classList.remove("blend-into-text");
+            document.querySelector(".right-chain").classList.add("blend-into-green");
+        }  else {
+            document.querySelector(".right-chain").classList.remove("blend-into-text");
+            document.querySelector(".right-chain").classList.remove("blend-into-green");
+        }
     });
 
     document.getElementById("html-logo").addEventListener("click", ev => {
@@ -31,6 +64,7 @@ window.onload = () => {
             const menu = document.getElementById("navigation-menu");
             const menuIsOpen = menu.classList.contains("navigation-menu-open");
             menuIsOpen && menu.classList.remove("navigation-menu-open");
+            menuIsOpen && document.querySelector("body").classList.remove("no-scroll");
         } 
     })
 }
