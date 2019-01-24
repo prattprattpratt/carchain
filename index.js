@@ -77,7 +77,12 @@ window.onload = () => {
             targetClassList.contains("hero-layer-two") || 
             targetClassList.contains("hero-layer-three") || 
             targetClassList.contains("hero-2-layer-one") ||
-            targetClassList.contains("hero-2-text")
+            targetClassList.contains("hero-2-text") ||
+            targetClassList.contains("hero-3") ||
+            targetClassList.contains("hero-3-text") ||
+            targetClassList.contains("hero-3-cars-container") ||
+            targetClassList.contains("footer") ||
+            targetClassList.contains("fab")
         ) {
             const menu = document.getElementById("navigation-menu");
             const menuIsOpen = menu.classList.contains("navigation-menu-open");
