@@ -20,12 +20,23 @@ window.onload = () => {
         ) {
             document.querySelector(".left-chain").classList.add("blend-into-text");
             document.querySelector(".left-chain").classList.remove("blend-into-green");
-        } else if (scrollY > 759) {
-            document.querySelector(".left-chain").classList.remove("blend-into-text");
+            document.querySelector(".left-chain").classList.remove("blend-into-white");
+            document.querySelector("#html-logo").classList.remove("show-on-white");            
+        } else if (scrollY > 759 & scrollY < 1532) {
             document.querySelector(".left-chain").classList.add("blend-into-green");
+            document.querySelector(".left-chain").classList.remove("blend-into-text");
+            document.querySelector(".left-chain").classList.remove("blend-into-white");
+            document.querySelector("#html-logo").classList.remove("show-on-white");            
+        } else if (scrollY >= 1532) {
+            document.querySelector("#html-logo").classList.add("show-on-white");            
+            document.querySelector(".left-chain").classList.add("blend-into-white");
+            document.querySelector(".left-chain").classList.remove("blend-into-text");
+            document.querySelector(".left-chain").classList.remove("blend-into-green");
         } else {
             document.querySelector(".left-chain").classList.remove("blend-into-text");
             document.querySelector(".left-chain").classList.remove("blend-into-green");
+            document.querySelector(".left-chain").classList.remove("blend-into-white");
+            document.querySelector("#html-logo").classList.remove("show-on-white");            
         }
 
         if (
@@ -35,12 +46,19 @@ window.onload = () => {
         ) {
             document.querySelector(".right-chain").classList.add("blend-into-text");
             document.querySelector(".right-chain").classList.remove("blend-into-green");
-        } else if (scrollY > 769) {
-            document.querySelector(".right-chain").classList.remove("blend-into-text");
+            document.querySelector(".right-chain").classList.remove("blend-into-white");
+        } else if (scrollY > 769 && scrollY < 1532) {
             document.querySelector(".right-chain").classList.add("blend-into-green");
-        }  else {
+            document.querySelector(".right-chain").classList.remove("blend-into-text");
+            document.querySelector(".right-chain").classList.remove("blend-into-white");
+        } else if (scrollY >= 1532) {
+            document.querySelector(".right-chain").classList.add("blend-into-white");
             document.querySelector(".right-chain").classList.remove("blend-into-text");
             document.querySelector(".right-chain").classList.remove("blend-into-green");
+        } else {
+            document.querySelector(".right-chain").classList.remove("blend-into-text");
+            document.querySelector(".right-chain").classList.remove("blend-into-green");
+            document.querySelector(".right-chain").classList.remove("blend-into-white");
         }
     });
 
