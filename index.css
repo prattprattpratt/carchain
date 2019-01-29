@@ -97,10 +97,10 @@ h3, p, span {
                 z-index: 1;
             }
             .left-chain.blend-into-text::before, .right-chain.blend-into-text::before {
-                background: #eafffb;
+                background: #fff3f8;
             }
             .left-chain.blend-into-green::before, .right-chain.blend-into-green::before {
-                background: #23F0C7;
+                background: #f50057;
             }
             .left-chain.blend-into-white::before, .right-chain.blend-into-white::before {
                 background: white !important;
@@ -258,18 +258,37 @@ h3, p, span {
                 border-top: solid #acdeff 119.625px;
             }
                 .hero-layer-four {
-                    width: 200px;
-                    height: 200px;
                     background: #eaf6ff;
                     position: absolute;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin-top: 106.25px;
-                    margin-left: 106.25px;
                     box-shadow: 30px 30px 60px #00000030;
                     z-index: 1;
                 }
+                .hero-layer-four, .hero-2-layer-four {
+                    transition: margin 0.4s, transform 0.6s cubic-bezier(0, 0, 0.29, 2.43);
+                    cursor: pointer;
+                    white-space: nowrap;
+                    border-radius: 4px;
+                    width: 80px;
+                    height: 200px;
+                    margin-top: 106.25px;
+                    margin-left: 166.25px;
+                }
+                .hero-layer-four:hover {
+                    margin-top: 103.25px;
+                    margin-left: 163.25px;
+                }
+                .hero-2-layer-four:hover {
+                    margin-left: 170.25px;
+                }
+                    .hero-layer-four-text, .hero-2-layer-four-text {
+                        transform: rotate(-90deg);
+                        font-size: 2rem;
+                        font-weight: bold;
+                        color: #505050;
+                    }
                     .hero-image {
                         width: 500px;
                         transform: rotate(-20deg);
@@ -305,19 +324,19 @@ h3, p, span {
 .hero-2-layer-one {
     height: 100%;
     width: 100%;
-    background: #23F0C7;
+    background: #f50057;
     display: flex;
 }
     .hero-2-text {
         position: absolute;
         right: 0;
         margin: 33vh 8vh 0 0;
-        color: #eafffb;
+        color: #fff3f8;
         z-index: 1;
     }
     .hero-2-layer-two {
         height: 625px;
-        background: #6df9dd;
+        background: #ff4e8d;
         margin: 12vh 0 0 12vh;
         display: flex;
         position: relative;
@@ -327,14 +346,14 @@ h3, p, span {
         width: 625px;
     }
     .hero-2-layer-two::before, .hero-2-layer-two::after {
-        border-left: solid #23F0C7 181.25px;
-        border-right: solid #23F0C7 181.25px;
+        border-left: solid #f50057 181.25px;
+        border-right: solid #f50057 181.25px;
     }
     .hero-2-layer-two::before {
-        border-bottom: solid #6df9dd 181.25px;
+        border-bottom: solid #ff4e8d 181.25px;
     }
     .hero-2-layer-two::after {
-        border-top: solid #6df9dd 181.25px;
+        border-top: solid #ff4e8d 181.25px;
     }
     .hero-2-layer-two::before, .hero-2-layer-two::after,
     .hero-2-layer-three::before, .hero-2-layer-three::after {
@@ -347,7 +366,7 @@ h3, p, span {
         bottom: 0;
     }
         .hero-2-layer-three {
-            background: #affbec;
+            background: #ffa9c8;
             height: 412.5px;
             position: absolute;
             margin: 106.25px 0 0 106.25px;
@@ -358,25 +377,21 @@ h3, p, span {
             width: 412.5px;
         }
         .hero-2-layer-three::before, .hero-2-layer-three::after {
-            border-left: solid #6df9dd 119.625px;
-            border-right: solid #6df9dd 119.625px;
+            border-left: solid #ff4e8d 119.625px;
+            border-right: solid #ff4e8d 119.625px;
         }
         .hero-2-layer-three::before {
-            border-bottom: solid #affbec 119.625px;
+            border-bottom: solid #ffa9c8 119.625px;
         }
         .hero-2-layer-three::after {
-            border-top: solid #affbec 119.625px;
+            border-top: solid #ffa9c8 119.625px;
         }
             .hero-2-layer-four {
-                width: 200px;
-                height: 200px;
-                background: #eafffb;
+                background: #fff3f8;
                 position: absolute;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: 106.25px;
-                margin-left: 106.25px;
                 box-shadow: 30px 30px 60px #00000030;
                 transform: rotate(-10deg);
                 z-index: 1;
@@ -401,7 +416,6 @@ h3, p, span {
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        border: solid 1px #cfcfcf;
         border-radius: 3px;
         margin: 1rem;
     }
@@ -414,7 +428,7 @@ h3, p, span {
             flex: 1;
             display: flex;
             flex-direction: column;
-            padding: 1rem;
+            padding: 1rem 0.5rem;
         }
             .car-body h3 {
                 margin-top: 0;
