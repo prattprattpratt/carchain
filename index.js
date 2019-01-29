@@ -1,18 +1,44 @@
 window.onload = () => {
     window.addEventListener("scroll", ev => {
         const scrollY = window.scrollY;
-        console.log(scrollY);
 
-        const heroDeg = 25 + scrollY / 10;
+        rotateHeroSections(scrollY);
+        updateLogoColors(scrollY);
+    });
+
+    document.getElementById("html-logo").addEventListener("click", ev => {
+        const menu = document.getElementById("navigation-menu");
+        menu.classList.toggle("navigation-menu-open");
+
+        const body = document.querySelector("body");
+        body.classList.toggle("no-scroll");
+    });
+
+    window.addEventListener("click", ev => {
+        closeMenu(ev);
+    })
+
+    rotateHeroSections = (scrollY) => {
+        const heroDeg = scrollY / 10;
         const heroLayerTwo = document.getElementsByClassName("hero-layer-two")[0];
+        const heroLayerThree = document.getElementsByClassName("hero-layer-three")[0];
+        const heroLayerFour = document.getElementsByClassName("hero-layer-four")[0];
 
-        heroLayerTwo.style.transform = `rotate(${heroDeg}deg)`;
+        heroLayerTwo.style.transform = `rotate(${heroDeg + 25}deg)`;
+        heroLayerThree.style.transform = `rotate(-${heroDeg * 2 + 340}deg)`;
+        heroLayerFour.style.transform = `rotate(${heroDeg + 45}deg)`;
 
-        const hero2Deg = + scrollY / 5 - 130;
+        const hero2Deg = + scrollY / 3;
         const hero2LayerTwo = document.getElementsByClassName("hero-2-layer-two")[0];
+        const hero2LayerThree = document.getElementsByClassName("hero-2-layer-three")[0];
+        const hero2LayerFour = document.getElementsByClassName("hero-2-layer-four")[0];
 
-        hero2LayerTwo.style.transform = `rotate(${hero2Deg}deg)`;
+        hero2LayerTwo.style.transform = `rotate(${hero2Deg - 130}deg)`;
+        hero2LayerThree.style.transform = `rotate(-${hero2Deg * 2 - 30}deg)`;
+        hero2LayerFour.style.transform = `rotate(${hero2Deg - 170}deg)`;
+    }
 
+    updateLogoColors = (scrollY) => {
         if (
             (scrollY > 164 && scrollY < 244) ||
             (scrollY > 326 && scrollY < 382) ||
@@ -60,17 +86,9 @@ window.onload = () => {
             document.querySelector(".right-chain").classList.remove("blend-into-green");
             document.querySelector(".right-chain").classList.remove("blend-into-white");
         }
-    });
+    }
 
-    document.getElementById("html-logo").addEventListener("click", ev => {
-        const menu = document.getElementById("navigation-menu");
-        menu.classList.toggle("navigation-menu-open");
-
-        const body = document.querySelector("body");
-        body.classList.toggle("no-scroll");
-    });
-
-    window.addEventListener("click", ev => {
+    closeMenu = (ev) => {
         const targetClassList = ev.target.classList;
         if (
             targetClassList.contains("hero-layer-one") || 
@@ -89,7 +107,10 @@ window.onload = () => {
             menuIsOpen && menu.classList.remove("navigation-menu-open");
             menuIsOpen && document.querySelector("body").classList.remove("no-scroll");
         } 
-    })
+    }
+
+    rotateHeroSections(window.scrollY);
+    updateLogoColors(window.scrollY);
 }
 
 // let interval;
