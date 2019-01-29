@@ -192,6 +192,7 @@ h3, p, span {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    position: relative;
 }
     .hero-layer-one {
         height: 100%;
@@ -403,6 +404,22 @@ h3, p, span {
                     margin-bottom: 30px;
                 }
 
+/* .hero-3-bar, .hero-3-bar-2 {
+    position: absolute;
+    height: 190%;
+    width: 18%;
+    z-index: -1;
+    transform: rotate(30deg);
+    top: -37%;
+}
+.hero-3-bar {
+    background: #019cff5e;
+    left: 29%;
+}
+.hero-3-bar-2 {
+    background: #f500575e;
+    left: 50%;
+} */
 .hero-3-text {
     text-align: center;
 }
